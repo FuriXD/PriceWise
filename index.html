@@ -17,6 +17,7 @@
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
             background: #f5f7fa; /* Default background for main app */
+            line-height: 1.6; /* Improved readability */
         }
 
         .container {
@@ -33,6 +34,7 @@
             min-height: 100vh;
             background: #f8f8f8; /* Off-white, more professional */
             transition: background 0.5s ease;
+            padding: 20px; /* Add padding for smaller screens */
         }
 
         .login-box {
@@ -1206,7 +1208,8 @@
                 margin-right: 0;
                 justify-content: center;
                 gap: 15px;
-                flex-wrap: wrap;
+                flex-wrap: wrap; /* Allow nav items to wrap */
+                font-size: 14px; /* Smaller font for nav items */
             }
             .nav-menu li {
                 padding: 6px 10px;
@@ -1220,13 +1223,43 @@
             }
             .section-title {
                 font-size: 28px;
+                margin-bottom: 30px; /* Reduce margin */
             }
             .cart-item {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 15px; /* Reduce padding */
             }
             .cart-item-image {
                 margin-bottom: 15px;
+                width: 70px; /* Smaller image */
+                height: 70px;
+                font-size: 28px;
+            }
+            .cart-item-name {
+                font-size: 18px; /* Smaller font */
+            }
+            .cart-item-price {
+                font-size: 16px; /* Smaller font */
+            }
+            .quantity-controls {
+                flex-wrap: wrap; /* Allow quantity controls to wrap */
+                margin: 10px 0;
+            }
+            .remove-btn {
+                width: 100%; /* Make remove button full width */
+                margin-top: 10px;
+            }
+            .price-comparison {
+                padding: 10px; /* Smaller padding */
+            }
+            .competitor-prices {
+                flex-direction: column; /* Stack competitor prices */
+                gap: 8px; /* Smaller gap */
+            }
+            .competitor-price {
+                font-size: 12px; /* Smaller font */
+                padding: 8px 10px;
             }
             .social-buttons {
                 flex-direction: column;
@@ -1237,8 +1270,122 @@
                 max-width: 250px;
                 justify-content: center;
             }
+            .form-row .form-group {
+                min-width: 100%; /* Make form inputs full width */
+            }
+            .payment-methods {
+                flex-direction: column; /* Stack payment methods */
+            }
+            .payment-method {
+                min-width: unset; /* Remove min-width constraint */
+                width: 100%; /* Full width */
+            }
+            .modal-content {
+                padding: 20px; /* Smaller modal padding */
+            }
+            .modal-title {
+                font-size: 26px; /* Smaller modal title */
+            }
+            .modal-message {
+                font-size: 16px; /* Smaller modal message */
+            }
+            .modal-details span:first-child {
+                width: 90px; /* Adjust label width */
+            }
+            .checkout-btn, .activate-pro-btn {
+                font-size: 16px; /* Smaller button text */
+                padding: 15px;
+            }
+            .profile-summary h3 {
+                font-size: 24px;
+            }
+            .profile-summary p {
+                font-size: 18px;
+            }
+            .order-history h3 {
+                font-size: 20px;
+            }
+            .order-item-card {
+                padding: 15px;
+            }
+            .order-details-list li {
+                font-size: 14px;
+            }
+            .order-details-list li strong {
+                width: 80px;
+            }
+            .category-products-page .header-section h2 {
+                font-size: 32px;
+            }
         }
 
+        /* Further adjustments for very small screens (e.g., <= 480px) */
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 25px;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            .category-card {
+                padding: 25px;
+            }
+            .category-icon {
+                font-size: 40px;
+            }
+            .products-grid, .categories-grid {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 20px; /* Reduce gap */
+            }
+            .product-image {
+                height: 150px; /* Smaller product images */
+                font-size: 50px;
+            }
+            .product-name {
+                font-size: 18px;
+            }
+            .product-price {
+                font-size: 24px;
+            }
+            .add-to-cart-btn, .price-alert-btn, .share-btn {
+                padding: 12px;
+                font-size: 13px;
+            }
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            .cart-summary {
+                padding: 20px;
+            }
+            .checkout-form {
+                padding: 20px;
+            }
+            .modal-content {
+                padding: 25px 15px;
+            }
+            .modal-title {
+                font-size: 24px;
+            }
+            .modal-message {
+                font-size: 15px;
+            }
+            .plan-card {
+                padding: 25px;
+            }
+            .plan-title {
+                font-size: 24px;
+            }
+            .plan-price {
+                font-size: 40px;
+            }
+            .plan-features li {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1774,7 +1921,7 @@
                 "Decathlon": { price: 750, delivery: 50, icon: "🟩" },
                 "Amazon": { price: 680, delivery: 49, icon: "🟠" }
             }},
-            { id: 38, name: "Dumbbell Set (5kg x 2)", category: "Sports", price: 1800, icon: "💪", competitors: {
+            { id: 38, name: "Dumbbell Set (5kg x 2)", category: "Sports", price: 1800, icon: "�", competitors: {
                 "Amazon": { price: 1950, delivery: 100, icon: "🟠" },
                 "Flipkart": { price: 1750, delivery: 0, icon: "🟡" },
                 "Decathlon": { price: 1850, delivery: 80, icon: "🟩" }
@@ -1966,7 +2113,7 @@
                 "Amazon": { price: 2650, delivery: 49, icon: "🟠" },
                 "Flipkart": { price: 2400, delivery: 0, icon: "🟡" }
             }},
-            { id: 79, name: "Water Gun (Large)", category: "Toys", price: 300, icon: "�", competitors: {
+            { id: 79, name: "Water Gun (Large)", category: "Toys", price: 300, icon: "🔫", competitors: {
                 "Amazon": { price: 320, delivery: 49, icon: "🟠" },
                 "Flipkart": { price: 280, delivery: 0, icon: "🟡" }
             }},
@@ -2594,7 +2741,7 @@
                         <li><strong>Items:</strong></li>
                         <ul>
                             ${order.items.map(item => `
-                                <li>- ${item.name} (x${item.quantity}) from ${item.seller} @ ₹${item.price} each (Max Original: ₹${item.originalPrice}, Saved: ₹${(item.originalPrice - item.price).toFixed(0)})</li>
+                                <li>- ${item.name} (x${item.quantity}) from ${item.seller} @ ₹${item.price} each (Max Original: ₹${item.originalPrice}, Saved: ₹${((item.originalPrice - item.price) * item.quantity).toFixed(0)})</li>
                             `).join('')}
                         </ul>
                     </ul>
@@ -2643,3 +2790,4 @@
     </script>
 </body>
 </html>
+�
